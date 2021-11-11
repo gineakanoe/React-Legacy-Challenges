@@ -18,4 +18,4 @@ const SearchIndex extends Component() {
  }
 
  
-export SearchIndex;
+export default SearchIndex;
