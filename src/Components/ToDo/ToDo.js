@@ -1,4 +1,5 @@
 import React from 'react';
+import ToDoIndex from './ToDoIndex';
 import {Container} from 'reactstrap';
 
 const ToDo = () => {
@@ -6,7 +7,7 @@ const ToDo = () => {
     <Container className="App">
      <br />
        <h1 className="App-intro">
-     In this challenge your goal is to create a to do list: 
+        In this challenge your goal is to create a to do list: 
        </h1>
        <hr />
        <ul>
@@ -24,6 +25,7 @@ const ToDo = () => {
          </li>
        </ul>
        <hr />
+       <ToDoIndex />
      </Container>
   );
 };

@@ -24,7 +24,9 @@ class DogIndex extends Component {
         return(
             <div>
                 <h3>Get That Dog Challenge!</h3>
-                <img src={this.state.url} alt='' />
+                <img className='doggos' src={this.state.url} alt='' />
+                <br />
+                <br />
                 <button onClick={this.componentDidMount}>New Random Dog?</button>
             </div>
         )
