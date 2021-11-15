@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import Dogs from './Dogs';
 
 class DogIndex extends Component {
     constructor(props) {
         super(props)
-        this.state = {img: ''}
+        this.state = {url: ''}
     }
 
     componentDidMount = () => {
@@ -12,14 +11,20 @@ class DogIndex extends Component {
 
         fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
-        .then(data => this.setState({img: data.url}));
+        .then(data => {
+            this.setState({
+                url: data.message,
+            })
+            console.log(data)
+        })
+        .catch(err => console.log(err));
     };
 
     render(){
         return(
             <div>
                 <h3>Get That Dog Challenge!</h3>
-                <Dogs url={this.state.img} />
+                <img src={this.state.url} alt='' />
                 <button onClick={this.componentDidMount}>New Random Dog?</button>
             </div>
         )

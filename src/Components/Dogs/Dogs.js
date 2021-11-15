@@ -1,5 +1,6 @@
 // This is the file that connects to the Main.js for routing.
 import React from 'react';
+import DogIndex from './DogIndex';
 import {Container} from 'reactstrap';
  
 const Dogs = () => {
@@ -19,7 +20,8 @@ const Dogs = () => {
         <li>Make sure to include some good practice error handling</li>
       </ul>
       <hr />
-      <h3>Random Dog Image: {props.img}</h3>
+      <h3>Random Dog Image:</h3>
+      <DogIndex />
     </Container>
   );
 
